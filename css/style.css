@@ -1,0 +1,85 @@
+:root {
+    --bg-color : #fff;
+    --text-color : #222328;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    outline: 1px solid black;
+}
+
+header {
+    height: 100px;
+    position: relative;
+}
+
+header h1 {
+    position: absolute;
+    top: 25px;
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+
+header nav .depth1 {
+    display: flex;
+    text-align: center;
+}
+
+header nav > .depth1 > li {
+    outline: 1px solid #666;
+    width: 6rem;
+}
+
+header nav > .depth1 > li > a {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    padding: 5px;   
+}
+
+header nav .depth2 > li > a {
+    display: block;
+    padding: 8pxpx;
+}
+/* 2단계 메뉴 안보임 */
+header nav .depth2 {
+    margin-top: 25px;
+    background-color: #ddd;
+    transition: 0.5s;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* 2단계 메뉴 보임 */
+header nav .depth2.show {
+    max-height: 200px;
+    opacity: 1;
+}
+
+
+
+/* 메뉴 텍스트 하이라이트 효과 */
+header nav .depth1 > li > a:hover {
+    opacity: 0.7;
+}

@@ -27,6 +27,7 @@ a {
 header {
     height: 100px;
     position: relative;
+    z-index: 999;
 }
 
 header h1 {
@@ -131,10 +132,6 @@ header nav .depth2 > li > a:hover {
     object-fit: cover;
 }
 
-#notice-box {
-    background: #ccc;
-}
-
 /* 공지사항 탭메뉴 */
 #main-contents .notice .btn-group > a {
     font-size: 18px;
@@ -179,4 +176,46 @@ header nav .depth2 > li > a:hover {
 
 #main-contents .btn-group .btn-gallery.show {
     background-color: #fff;
+}
+
+
+/* popup 창 표현 */
+#main-contents {
+    position: relative;
+}
+
+#main-contents .popup {
+    position: absolute;
+    top: -200px;
+    left: 200px;
+    width: 800px;
+    height: 600px;
+    background-color: #ccc;
+    display: none;
+}
+
+#main-contents .popup.show {
+    display: block;
+}
+
+#main-contents .popup .popup-box {
+    position: absolute;
+    top: 578px;
+    left: 769px;
+}
+
+#main-contents .popup .popup-box .popup-close {
+    cursor: pointer;
+}
+
+
+/* footer */
+footer.container {
+    height: 80px;
+    background-color: #ddd;
+}
+
+footer.container > h1 > a {
+    /* outline: 1px solid red; */
+    opacity: 0.5;
 }

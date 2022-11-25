@@ -50,4 +50,12 @@ $(function(){
         $('#notice-box').removeClass('show');
     })
 
+
+    //공지사항 첫줄 클릭시 popup창 보이기
+    $('#main-contents .notice #notice-box a').on('click', function(){
+        $('#main-contents .popup').addClass('show');
+    })
+    $('#main-contents .popup .popup-box .popup-close').on('click', function(){
+        $('#main-contents .popup').removeClass('show');
+    })
 });

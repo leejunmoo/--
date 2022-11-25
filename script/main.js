@@ -34,4 +34,20 @@ $(function(){
 
     },3000);
 
+    //탭 UI
+    //버튼 스타일 클릭하면 버튼도 스타일바뀌게
+
+    //공지사항 클릭
+    $('.btn-group a.btn-notice').on('click', function(){
+        $('#notice-box').addClass('show');
+        //한쪽이 보이면 다른한쪽은 안보여야하니까
+        $('#gallery-box').removeClass('show');
+    })
+    
+    //갤러리 클릭
+    $('.btn-group a.btn-gallery').on('click', function(){
+        $('#gallery-box').addClass('show');
+        $('#notice-box').removeClass('show');
+    })
+
 });

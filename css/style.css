@@ -140,6 +140,7 @@ header nav .depth2 > li > a:hover {
     font-size: 18px;
     display: block;
     outline: 1px solid blue;
+    background-color: #ddd;
     padding: 5px 15px;
 }
 
@@ -164,12 +165,18 @@ header nav .depth2 > li > a:hover {
 #notice-box.show {
     display: block;
 }
+
 /* display 를 원래 상태로 돌려주는거라 꼭 block 이아니더라도됨 */
 #gallery-box.show {
     display: flex;
     margin-top: 20px;
 }
 
+/* 탭 버튼 스타일  자바에서 클래스 추가,삭제해보기*/
+#main-contents .btn-group .btn-notice.show {
+    background-color: #fff;
+}
 
-
-
+#main-contents .btn-group .btn-gallery.show {
+    background-color: #fff;
+}
